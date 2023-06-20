@@ -1,18 +1,23 @@
 import React from 'react';
 import './css/App.css';
-import {BrowserRouter,Route,Routes,Link} from 'react-router-dom';
-import page1 from './components/page1'
+import {createBrowserRouter,createRoutesFromElements,Route, RouterProvider} from 'react-router-dom';
+import {page1} from './components/page1'
+// ^^ page1 needs to be in brackets if it's not a default export (currently is a named export)
 
 export default function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route>
+        <Route path="./components/page1" element={<page1/>}></Route>
+      </Route>
+    )
+  )
+
   return (
     <div className='App'>
       <header className='App-header'>
         <h1>App.js header</h1>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/page1"></Route>
-          </Routes>
-        </BrowserRouter>
+        <RouterProvider router={router}/>
       </header>
 
       <body>
