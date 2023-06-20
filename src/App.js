@@ -1,16 +1,20 @@
-import './css/App.css';
 import React from 'react';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-//import ??? from '/components/???.js'
+import './css/App.css';
+import {BrowserRouter,Route,Routes,Link} from 'react-router-dom';
+import page1 from './components/page1'
 
-// line 8-20 is throwing a 'React' must be in scope when using JSX
 export default function App() {
   return (
     <div className='App'>
       <header className='App-header'>
         <h1>App.js header</h1>
-        {/* browser router */}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/page1"></Route>
+          </Routes>
+        </BrowserRouter>
       </header>
+
       <body>
         <h2>body</h2>
         <p>skajdhfklashvicshaaiwbeib</p>
