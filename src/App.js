@@ -1,14 +1,14 @@
 import React from 'react';
 import './css/App.css';
-import {createBrowserRouter,createRoutesFromElements,Route, RouterProvider} from 'react-router-dom';
-import {page1} from './components/page1'
+import {createBrowserRouter,createRoutesFromElements,Route,Link,Outlet,RouterProvider} from 'react-router-dom';
+import {page1} from './components/page1';
 // ^^ page1 needs to be in brackets if it's not a default export (currently is a named export)
 
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route>
-        <Route path="./components/page1" element={<page1/>}></Route>
+      <Route path="/" element={<Root/>}>
+        <Route index element={<page1/>}></Route>
       </Route>
     )
   )
@@ -28,3 +28,15 @@ export default function App() {
   );
 }
 
+const Root = () => {
+  return (
+    <> 
+      <div> 
+        <Link to="/"> Home </Link> 
+      </div>
+      <div>
+        <Outlet/>
+      </div>
+    </>
+  )
+}
