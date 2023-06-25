@@ -1,7 +1,9 @@
 import React from 'react'
 
-export function page1() {
-    return(
-        <div>page1</div>
+export default function Page1() {
+    return (
+        <div>
+            <h1>ksajhdflkashdfklashdf</h1>
+        </div>
     )
 }
