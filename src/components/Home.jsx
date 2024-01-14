@@ -1,6 +1,5 @@
 import React from 'react'
 import {createBrowserRouter,createRoutesFromElements,Route,Link,Outlet,RouterProvider} from 'react-router-dom';
-import {page1} from './Page1';
 // ^^ components needs to be in brackets if it's not a default export (currently is a named export)
 // this is being weird, come back to this page later
 
