@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA_-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/float.css">
+    <title>jQuery</title>
+    <style>
+        #textBox1 {
+            display:none;
+        }
+
+        .highlight {
+            text-shadow: 1px 1px #cccccc;            
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            var newText = $("<p>");
+            newText.append("<h1>i just replaced something</h1>");
+
+            $("h2:first").css("border","1px dotted green");
+            $("#textBox").replaceWith(newText);
+            $("#button").css("border","1px solid red");
+            $("#button").on("click", whenMouseIsClicked);
+            $("#button").on("mouseleave", whenMouseLeaves);
+            
+            function whenMouseIsClicked() {
+                $("#button").html("<h1>Successfully changed</h1>");
+            }
+            function whenMouseLeaves() {
+                $("#button").html("<h1>Where you going?</h1>");
+            }
+
+            $("#show").on("click", function(){
+                $("#textBox1").show();
+            })
+            $("#hide").on("click", function(){
+                $("#textBox1").hide();
+            })
+
+            $(".textCopy").hover(highlightCopy);
+            function highlightCopy() {
+                $(this).toggleClass("highlight");
+            }
+
+            $("#slide-up").click(function(){
+               $("#textBox3").slideUp("2000", "linear");
+            });
+            $("#slide-down").click(function(){
+               $("#textBox3").slideDown("2000", "linear");
+            });
+            $("#toggleSlide").click(function(){
+                $("#textBox3").slideToggle("2000", function() {
+                    alert("Done");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>jQuery Practice</h1>
+        <h2>Change me</h2>
+        <h2>Unchanged</h2>  
+    </header>
+    <nav>
+        <a href="/index.html">Index</a>
+        <a href="float.html">Float Page</a>
+        <a href="ajax.html">Ajax Page</a>
+    </nav>
+    
+    <div id="button">
+        button button button button button button
+    </div>
+    <div id="textBox">
+        this is getting replaced by the above replaceWith()
+    </div>
+    <a href="#" id="show">Click to show</a>
+    <a href="#" id="hide">Click to hide</a>
+    <div id="textBox1">
+        this is the hidden text, or at least it is if you click hide
+    </div>
+    <div id="textBox2">
+        <p class="textCopy">highlights this text on hover</p>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus at nulla hic accusamus delectus quaerat veniam dignissimos veritatis optio et provident, inventore recusandae non culpa tenetur velit dolorem eaque temporibus blanditiis similique voluptatum deleniti! Et placeat illo cupiditate ratione iure perferendis voluptates ipsum porro reiciendis, sapiente, eligendi optio sint totam laboriosam veritatis pariatur cum voluptas qui minima dolor tempora explicabo maxime. Voluptates odio voluptatem unde iusto, doloribus itaque, dolorem neque aliquid tenetur laboriosam asperiores recusandae autem odit hic, assumenda earum ipsam molestiae illum impedit? Autem, mollitia maxime. Harum illo quae aspernatur est sunt veritatis nulla tempore possimus, sequi ad reprehenderit blanditiis nam saepe cum consectetur libero sed earum inventore? Ut sit quo aliquid placeat asperiores molestiae, harum hic corporis in quisquam eaque ullam voluptate expedita excepturi ducimus, voluptas rem soluta ex animi? Fugiat dolore vero recusandae pariatur eos odio error laboriosam animi nisi doloremque veritatis excepturi non, ea possimus dolor sapiente quaerat eaque illo cumque aut labore libero illum? Blanditiis sit praesentium labore excepturi sint maxime, ad nihil, magni eaque quo aut officiis vel nam! Quam impedit blanditiis modi praesentium consequuntur voluptate sit ipsa inventore cupiditate commodi. Commodi culpa, reiciendis deserunt quasi nisi officiis laudantium quisquam omnis sed fugit voluptas qui veritatis sunt quaerat dolores? Neque maiores officia earum voluptate laboriosam quisquam tenetur quibusdam explicabo, esse quos a perspiciatis numquam deleniti dolores, at dignissimos quidem fugit consequuntur omnis cupiditate atque aliquam ipsa voluptatibus possimus! Ipsam fugit quia facere sint vel, molestias excepturi fugiat. Ducimus nisi minima, fuga doloribus numquam quod reprehenderit natus iure corporis quibusdam voluptatibus rem consectetur dolor voluptatum voluptas animi debitis laboriosam ipsa atque autem consequatur omnis earum inventore expedita. Ipsam culpa ipsum reprehenderit rem enim iusto totam maiores cum alias commodi obcaecati labore, officiis corporis possimus. Incidunt provident ad aperiam pariatur libero officiis? Debitis nam distinctio dolorum cumque. At dignissimos inventore vero error consequuntur amet esse enim perferendis quos impedit optio qui quaerat adipisci ratione quo, pariatur expedita, tempore sunt. Totam, magni quae sapiente omnis amet accusamus est quibusdam! Facilis sit ratione expedita sunt! Expedita sit exercitationem reiciendis consequuntur sapiente vel fugit ratione ex ipsam quam illum, consectetur cupiditate, eveniet, modi id voluptatibus excepturi necessitatibus! Nam cupiditate beatae et voluptatem magnam. Ullam debitis error autem reiciendis est mollitia ab tenetur aliquid sed! Quos laborum dolorem dolor, possimus aliquid iste, voluptas commodi dolorum iusto rerum natus adipisci harum. Blanditiis veritatis impedit obcaecati molestias fugiat, aspernatur a tempora cumque.</p>
+    <a href="#" id="slide-up">Slide up</a>
+    <a href="#" id="slide-down">Slide down</a>
+    <a href="#" id="toggleSlide">Toggle</a>
+    <div id="textBox3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis in inventore quaerat culpa reiciendis corrupti quibusdam velit? Magnam praesentium ullam pariatur dolore quam vero aut voluptate cum, sapiente mollitia!
+    </div>
+</body>
+</html>
