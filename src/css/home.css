@@ -1,8 +1,11 @@
 
 
 .home {
-    background-color: rgba(170, 170, 170, 0.2)
+    background-color: rgba(170, 170, 170, 0.2);
+}
 
+h2 {
+    margin: 0
 }
 
 .flex {
