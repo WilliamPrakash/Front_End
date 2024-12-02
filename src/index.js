@@ -6,6 +6,10 @@ import Home from './components/Home'
 import Page1 from './components/Page1'
 
 // index.js handles app startup, routing, and other functions
+// https://www.w3schools.com/react/react_router.asp
+// <Route>s can be nested. The first one has a path of / and renders the Layout component
+// Nested <Route>s inherit and add to the parent route
+// So the route to the page1 component would be /page1
 
 export default function App() {
   return (
@@ -23,13 +27,4 @@ export default function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
-
-
-
-/*ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-)*/
 

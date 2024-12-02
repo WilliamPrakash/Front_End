@@ -4,7 +4,7 @@ import '../css/Home.css'
 export default function home() {
 
       return (
-        <div class='container_main'>
+        <div class='home'>
           
           <header>
             <h2>Inside Home.jsx</h2>
