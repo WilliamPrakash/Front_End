@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Layout from './components/Layout'
 import Home from './components/Home'
@@ -13,7 +13,7 @@ import Page1 from './components/Page1'
 
 export default function App() {
   return (
-    // BrowserRouter only handles URL routing. Without the Layout, you'd need to manually manipulate the URL
+    // BrowserRouter only handles URL routing.
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout/>}>
