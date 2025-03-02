@@ -3,4 +3,6 @@
    otherwise you get tag nesting warnings. */
 body {
     margin: 0;
+    border: 0;
+    padding: 0;
 }

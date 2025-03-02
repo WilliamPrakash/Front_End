@@ -6,14 +6,12 @@ import {Outlet, Link} from 'react-router-dom'
 const Layout = () => {
     return (
     <>
-      <nav className="nav">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/Page1">Page1</Link>
-          </li>
+      <nav>
+        <ul className="navBar">
+          <Link className="navLink" to="/">Home</Link>
+          <Link className="navLink" to="/Page1">Page1</Link>
+          <Link className="navLink" to="/">Dead Link 1</Link>
+          <Link className="navLink" to="/">Dead Link 2</Link>
         </ul>
       </nav>
       <Outlet />
