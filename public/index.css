@@ -1,4 +1,6 @@
 
+/* This is the ONLY body tag in this project,
+   otherwise you get tag nesting warnings. */
 body {
     margin: 0;
 }
