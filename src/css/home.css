@@ -61,18 +61,18 @@ li:hover {
     height: 750px;
 }
 .box1 {
-    height: 750px;
+    height: 1000px;
     background-color: rgba(0, 0, 0, 0.2);
 }
 .box2 {
-    height: 750px;
+    height: 1000px;
     background-color: rgba(61, 64, 61, 0.2);
 }
 .box3 {
-    height: 750px;
+    height: 1000px;
     background-color: rgba(126, 124, 127, 0.2);
 }
 .box4 {
-    height: 750px;
+    height: 1000px;
     background-color: rgba(196, 191, 191, 0.2);
 }
