@@ -32,27 +32,16 @@ h3 {
     text-align: center;
 }
 
-/* Scroll buttons */
+/*  */
+ul {
+   list-style-type: none;
+}
+li {
+    width: fit-content;
+}
 li:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
     transform: scale(1.05);
-}
-.btn {
-    display: inline-block;
-    padding: 10px 30px;
-    cursor: pointer;
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-.btn-outline {
-    background-color: transparent;
-    border: 1px #fff solid;
-}
-.btn:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
-    transform: scale(.98);
 }
 
 /* Landing page sections */
