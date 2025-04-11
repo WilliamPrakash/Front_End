@@ -19,7 +19,7 @@
 }
 
 /* Titles */
-h2 {
+.h2_home {
     margin-top: 10px;
     margin-left: 0px;
     margin-right: 0px;
@@ -33,13 +33,13 @@ h3 {
 }
 
 /*  */
-ul {
+.ul_home {
    list-style-type: none;
 }
-li {
+.li_home {
     width: fit-content;
 }
-li:hover {
+.li_home:hover {
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
     transform: scale(1.05);
 }
