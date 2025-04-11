@@ -19,10 +19,13 @@ export default function ExpenseList() {
 
     return(
         <ul>
-            {expenses.map(exp => (
+            {/*expenses.map(exp => (
                 <li key={exp.Id}>{'Id: ' + exp.Id + ', Value: ' + exp.Value + ', Description: ' + exp.Description}</li>
+            ))*/}
+            { expenses.map(exp => (
+                <Expense key={exp.Id} expense={exp}/>
             ))}
-            <Expense />
+            
         </ul>
     )
 }
