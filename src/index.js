@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Layout from './components/Layout'
 import Home from './components/Home'
-import Page1 from './components/Page1'
+import Employees from './components/Employees'
+import Expenses from './components/Expenses'
 
 // index.js handles app startup, routing, and other functions
 // https://www.w3schools.com/react/react_router.asp
@@ -18,7 +19,8 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Home />} />
-          <Route path='page1' element={<Page1 />} />
+          <Route path='Expenses' element={<Expenses />} />
+          <Route path='Employees' element={<Employees />} />
         </Route>
       </Routes>
     </BrowserRouter>
