@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import Employee from './Employee.jsx'
-import $ from 'jquery'
+import React, { useState, useEffect } from 'react';
+import Employee from './Employee.jsx';
+import $ from 'jquery';
 
 export default function EmployeeList() {
     const [employeeData, setEmployeeData] = useState([])
@@ -14,7 +14,7 @@ export default function EmployeeList() {
             url: 'http://127.0.0.1:5215/api/Employees/GetEmployees',
             dataType: 'JSON',
             success: function(data) {
-                console.log(data)
+                //console.log(data)
                 setEmployeeData(data)
             }
         })
