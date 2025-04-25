@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import EditEmployee from './EditEmployee.jsx';
+import $ from 'jquery';
 
 export default function Employee(props) {
     const [edit, setEditStatus] = useState(false);
@@ -8,9 +9,25 @@ export default function Employee(props) {
         setEditStatus(edit => !edit);
     };
 
-    function handleSubmitCallback (name, email, occupation) {
-        console.log(name + ', ' + email + ', ' + occupation);
-        // TODO: insert ajax post call here
+    function handleSubmitCallback (id, name, email, occupation) {
+        // updatedEmployee will map to Employee model
+        const updatedEmployee = {
+            'Id': id,
+            'Name': name,
+            'Email': email,
+            'Occupation': occupation
+        };
+
+        $.ajax({
+            type: 'PUT',
+            url: 'http://127.0.0.1:5215/api/Employees/UpdateEmployee',
+            data: JSON.stringify(updatedEmployee),
+            dataType: 'JSON',
+            contentType: "application/json; charset=utf-8",
+            success: function(res) {
+                console.log(res);
+            }
+        });
     };
 
     return (

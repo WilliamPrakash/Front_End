@@ -9,7 +9,7 @@ export default function EditEmployee(props) {
     const handleSubmit = (e) => {
         e.preventDefault(); // prevents page refresh
         console.log(name);
-        props.handleSubmitCallback(name, email, occupation);
+        props.handleSubmitCallback(props.employee.id, name, email, occupation);
     };
     
     return (
@@ -17,7 +17,6 @@ export default function EditEmployee(props) {
             <label>Name: </label>
             <input 
                 type='text'
-                defaultValue={name}
                 onChange={e => setName(e.target.value)}    
                 value={name}
             />
@@ -25,7 +24,6 @@ export default function EditEmployee(props) {
             <label>Email: </label>
             <input 
                 type='text'
-                defaultValue={email}
                 onChange={e => setEmail(e.target.value)}
                 value={email}
             />
@@ -33,7 +31,6 @@ export default function EditEmployee(props) {
             <label>Occupation: </label>
             <input
                 type='text'
-                defaultValue={props.employee.name}
                 onChange={e => setOccupation(e.target.value)}
                 value={occupation}
             />
