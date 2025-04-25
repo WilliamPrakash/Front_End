@@ -8,11 +8,16 @@ export default function Employee(props) {
         setEditStatus(edit => !edit);
     };
 
+    function handleSubmitCallback (name, email, occupation) {
+        console.log(name + ', ' + email + ', ' + occupation);
+        // TODO: insert ajax post call here
+    };
+
     return (
         <li className='li_employee' key={props.employee.id}>
             <p>{ 'Id: ' + props.employee.id + ', Name: ' + props.employee.name + ', Email: ' + props.employee.email + ', Occupation: ' + props.employee.occupation }</p>
             <button onClick={toggleEditPopup}>Edit {props.employee.name}</button>
-            {edit ? <EditEmployee employee={props.employee}/> : null}
+            {edit ? <EditEmployee employee={props.employee} handleSubmitCallback={handleSubmitCallback}/> : null}
         </li>
     );
 }
