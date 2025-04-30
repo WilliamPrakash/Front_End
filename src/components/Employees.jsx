@@ -4,13 +4,17 @@ import NewEmployee from './Employees_ChildComponents/NewEmployee.jsx';
 import $ from 'jquery';
 
 export default function Employees() {
-    const [employee, setEmployee] = useState({'Name': null, 'Email': null, 'Occupation': null});
+    //const [employee, setEmployee] = useState({'Name': null, 'Email': null, 'Occupation': null});
 
-    function createEmployee(name, email, occupation) {
+    //function createEmployee(name, email, occupation) {
+    function createEmployee() {
+        //let x = $('form').serialize();
+
+        let employee = {'Name': null, 'Email': null, 'Occupation': null};
         let newEmployee = {
-            'Name': name,
-            'Email': email,
-            'Occupation': occupation
+            'Name': employee.name,
+            'Email': employee.email,
+            'Occupation': employee.occupation
         }
         // Post
         $.ajax({
@@ -31,7 +35,8 @@ export default function Employees() {
             <h1>Employee</h1>
             <EmployeeList />
             <br />
-            <NewEmployee setEmployeeCallback={setEmployee}/>
+            {/*<NewEmployee createEmployee={createEmployee} employee={employee} setEmployee={setEmployee}/>*/}
+            <NewEmployee createEmployee={createEmployee}/>
         </div>
     )
 }
