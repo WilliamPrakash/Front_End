@@ -4,10 +4,20 @@ import NewEmployee from './Employees_ChildComponents/NewEmployee.jsx';
 import $ from 'jquery';
 
 export default function Employees() {
-    //const [employee, setEmployee] = useState({'Name': null, 'Email': null, 'Occupation': null});
+    const [employee, setEmployee] = useState({Name: null, Email: null, Occupation: null});
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setEmployee(prevData => ({...prevData, [name]: value}))
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(employee);
+    }
 
     //function createEmployee(name, email, occupation) {
-    function createEmployee() {
+    /*function createEmployee() {
         //let x = $('form').serialize();
 
         let employee = {'Name': null, 'Email': null, 'Occupation': null};
@@ -27,7 +37,7 @@ export default function Employees() {
                 console.log(res);
             }
         });
-    }
+    }*/
     
 
     return (
@@ -35,8 +45,7 @@ export default function Employees() {
             <h1>Employee</h1>
             <EmployeeList />
             <br />
-            {/*<NewEmployee createEmployee={createEmployee} employee={employee} setEmployee={setEmployee}/>*/}
-            <NewEmployee createEmployee={createEmployee}/>
+            <NewEmployee handleChange={handleChange} handleSubmit={handleSubmit} employee={employee}/>
         </div>
     )
 }
