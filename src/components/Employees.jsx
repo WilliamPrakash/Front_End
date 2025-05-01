@@ -4,41 +4,32 @@ import NewEmployee from './Employees_ChildComponents/NewEmployee.jsx';
 import $ from 'jquery';
 
 export default function Employees() {
-    const [employee, setEmployee] = useState({Name: null, Email: null, Occupation: null});
+    const [employee, setEmployee] = useState({Name: '', Email: '', Occupation: ''});
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setEmployee(prevData => ({...prevData, [name]: value}))
+        setEmployee(prevData => ({...prevData, [name]: value}));
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(employee);
+        createEmployee();
     }
 
-    //function createEmployee(name, email, occupation) {
-    /*function createEmployee() {
-        //let x = $('form').serialize();
-
-        let employee = {'Name': null, 'Email': null, 'Occupation': null};
-        let newEmployee = {
-            'Name': employee.name,
-            'Email': employee.email,
-            'Occupation': employee.occupation
-        }
+    function createEmployee() {
         // Post
         $.ajax({
             type: 'POST',
-            url: '127.0.0.1:5215/api/Employees/CreateEmployee',
-            data: JSON.stringify(newEmployee),
+            url: 'http://127.0.0.1:5215/api/Employees/CreateEmployee',
+            data: JSON.stringify(employee),
             dataType: 'JSON',
             contentType: "application/json; charset=utf-8",
             success: function(res) {
                 console.log(res);
             }
         });
-    }*/
-    
+    }
 
     return (
         <div>
