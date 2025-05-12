@@ -20,7 +20,7 @@ export default function Employee(props) {
 
         $.ajax({
             type: 'PUT',
-            url: 'http://127.0.0.1:5215/api/Employees/UpdateEmployee',
+            url: 'http://127.0.0.1:5215/api/Employee/UpdateEmployee',
             data: JSON.stringify(updatedEmployee),
             dataType: 'JSON',
             contentType: "application/json; charset=utf-8",

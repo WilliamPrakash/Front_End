@@ -11,7 +11,7 @@ export default function EmployeeList() {
         // Fetch data from API
         $.get({
             type: 'GET',
-            url: 'http://127.0.0.1:5215/api/Employees/GetEmployees',
+            url: 'http://127.0.0.1:5215/api/Employee/GetEmployees',
             dataType: 'JSON',
             success: function(data) {
                 //console.log(data)

@@ -21,7 +21,7 @@ export default function Employees() {
         // Post
         $.ajax({
             type: 'POST',
-            url: 'http://127.0.0.1:5215/api/Employees/CreateEmployee',
+            url: 'http://127.0.0.1:5215/api/Employee/CreateEmployee',
             data: JSON.stringify(employee),
             dataType: 'JSON',
             contentType: "application/json; charset=utf-8",
