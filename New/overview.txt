@@ -41,3 +41,43 @@ html-webpack-plugin.
 10. Create a webpack.config.js file.
 11. 
 12. 
+
+Notes:
+"mode" is self-explanatory. We’re telling Webpack
+were in development.
+"entry" is our main JavaScript file, or the ‘entry
+point’. In React, this is the file where we use our
+renderer.
+"output" tells Webpack where to put our bundled code
+and what to name the file. Here, we’re telling Webpack
+to create a directory named /dir in the root directory
+(__dirname is a Node variable representing the current
+directory path) and create a file within it named
+bundle.js.
+"devtool" allows us to utilize development tools
+provided by Webpack. I’m using source-map because,
+after Webpack compiles our project, all of our code
+will be located in a single file we did not create.
+source-map builds a separate file that maps the
+source of code in our bundled file to the JavaScript
+files we actually created.
+"module" is where we tell Webpack to use all of those
+loaders we installed before. We’re using regex to tell
+each loader which file extensions to target. Also,
+we’re telling Webpack to run ESLint before Babel
+translates our code ("enforce": “pre",), so it can
+warn us about stuff in our source code, not the
+compiled code.
+"plugins" is where we tell Webpack which plugins we
+want to use along with any configuration for those
+plugins. Here, we’re using the html-webpack-plugin
+to generate an HTML file with everything we need to
+load our code.
+
+Babel
+All we need to do is tell Babel to use the presets we
+installed.In a nutshell, @babel/preset-env converts
+the latest JavaScript syntax and @babel/preset-react
+converts the JSX.
+
+
