@@ -41,6 +41,7 @@ html-webpack-plugin.
 10. Configure Babel: .babelrc
 11. Configure ESLinter: .eslintrc.js
 12. Install webpack-dev-server.
+13. Install react-router-dom.
 
 Webpack config
 "mode" is self-explanatory. We’re telling Webpack

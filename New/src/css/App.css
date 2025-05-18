@@ -1,0 +1,67 @@
+
+/* General */
+.app {
+    background-color: rgba(170, 170, 170, 0.2);
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Titles */
+.h2_home {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+/*  */
+.ul_home {
+   list-style-type: none;
+}
+.li_home {
+    width: fit-content;
+}
+.li_home:hover {
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05);
+}
+
+/* Landing page sections */
+/* TODO: change from static pixels to more dynamic size measurement */
+.box0 {
+    height: 750px;
+}
+.box1 {
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.box2 {
+    height: 1000px;
+    background-color: rgba(61, 64, 61, 0.2);
+}
+.box3 {
+    height: 1000px;
+    background-color: rgba(126, 124, 127, 0.2);
+}
+.box4 {
+    height: 1000px;
+    background-color: rgba(196, 191, 191, 0.2);
+}

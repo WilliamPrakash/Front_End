@@ -1,0 +1,25 @@
+
+/* General */
+.navBar {
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+    display: flex;
+}
+
+/* Site Links */
+.navLink {
+    color: white;
+    text-decoration: none;
+}
+.navLink:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    /*text-shadow: 0 5px 15px rgb(255, 0, 0);*/
+}
+/*.navLink:visited {
+    color: white;
+    text-decoration: none;
+}*/
