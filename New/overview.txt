@@ -1,0 +1,43 @@
+-Creating a react app from scratch
+Source: https://medium.com/swlh/react-without-create-react-app-setting-up-a-dev-build-from-scratch-fefd5d9d6baa
+
+What's needed for development:
+1. React: a library of references to the React API. To
+actually render React components, you also need a
+renderer that will inject functionality into those
+references and render them to the DOM.
+2. Bundler: Bundles all of your JavaScript, including
+modules, into one file. Important cause your JavaScript
+will need to be loaded into an HTML document and 
+loading <script> tags is very expensive. A bundler
+allows you to condense all of your JavaScript into
+one file (along with CSS if you like). Using Webpack
+as our bundler, and we'll configure it to use both
+Babel and ESLint during the bundling process. 
+-Babel is necessary to include in React apps
+because it transpiles ES6 and JSX into backwards
+compatible code.
+-Linters basically analyze your code and warn you
+about stuff that won't necessarily break your
+application but could present problems later.
+3. Server: you need a server to host your app during
+development, preferably one with hot reload enabled.
+Using Webpack's development server here.
+4. Tests: 
+
+Steps:
+1. Create a project directory and initialize npm
+so we can install our packages.
+2. Install react and react-dom (the renderer).
+3. Create index.html and index.js and link them with
+a 'root' div and a document.getElementById('root').
+4. Create an App.jsx.
+5. Install webpack, webpack-cli, and 
+html-webpack-plugin.
+6. Install html-loader, css-loader, style-loader.
+7. Install Babel (or another bundler).
+8. ESLint (or another linter)
+9. Configure Webpack, Babel, and ESLinter.
+10. Create a webpack.config.js file.
+11. 
+12. 
