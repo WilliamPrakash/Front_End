@@ -27287,21 +27287,15 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _src_App_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/App.jsx */ "./src/App.jsx");
-/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-
-//import ReactDOM from 'react-dom';
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _src_App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/App.jsx */ "./src/App.jsx");
 
 
 
-/*ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-)*/
 
 // container??
-var root = react_dom_client__WEBPACK_IMPORTED_MODULE_2__.createRoot(document.getElementById('root'));
-root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_App_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+var root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById('root'));
+root.render(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_src_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 })();
 
 /******/ })()

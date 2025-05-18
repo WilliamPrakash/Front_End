@@ -1,4 +1,4 @@
--Creating a react app from scratch
+Creating a react app from scratch
 Source: https://medium.com/swlh/react-without-create-react-app-setting-up-a-dev-build-from-scratch-fefd5d9d6baa
 
 What's needed for development:
@@ -23,7 +23,7 @@ application but could present problems later.
 3. Server: you need a server to host your app during
 development, preferably one with hot reload enabled.
 Using Webpack's development server here.
-4. Tests: 
+4. Tests: ???
 
 Steps:
 1. Create a project directory and initialize npm
@@ -36,13 +36,13 @@ a 'root' div and a document.getElementById('root').
 html-webpack-plugin.
 6. Install html-loader, css-loader, style-loader.
 7. Install Babel (or another bundler).
-8. ESLint (or another linter)
-9. Configure Webpack, Babel, and ESLinter.
-10. Create a webpack.config.js file.
-11. 
-12. 
+8. Install ESLint (or another linter).
+9. Configure Webpack: webpack.config.js
+10. Configure Babel: .babelrc
+11. Configure ESLinter: .eslintrc.js
+12. Install webpack-dev-server.
 
-Notes:
+Webpack config
 "mode" is self-explanatory. We’re telling Webpack
 were in development.
 "entry" is our main JavaScript file, or the ‘entry
@@ -74,10 +74,15 @@ plugins. Here, we’re using the html-webpack-plugin
 to generate an HTML file with everything we need to
 load our code.
 
-Babel
+Babel config
 All we need to do is tell Babel to use the presets we
-installed.In a nutshell, @babel/preset-env converts
+installed.cIn a nutshell, @babel/preset-env converts
 the latest JavaScript syntax and @babel/preset-react
 converts the JSX.
 
-
+ESLint config
+What we’re essentially doing here is notifying ESLint
+that we’re using Babel and React. We also want to tell
+ESLint that we’re working in the browser environment.
+Otherwise, it will incorrectly warn us that global
+variables like document are not defined.
